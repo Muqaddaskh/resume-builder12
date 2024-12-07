@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="mainstyle.css"></link>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Resume Builder</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="personalinfo.html">Personal Information</li></a>
+                   <li><a href="education.html">Education</li></a>
+                    <li><a href="skills.html">Skills</li></a>
+                    <li><a href="/">Working Experiance</li></a>
+                    <li><a href="/">Preview CV</li></a>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+<main>
+    <section class="first-section">
+        <div class="left-section">Hi' This is <span class="colors">CV Land</span>
+        <div class="leftinner">So, Good To See You Here 
+           </div>
+           <span id="element"></span>
+        </div>
+        <div class="right-section">
+            <img src="bg.png.png" alt="">
+        </div>
+
+</main>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['You Can Easily Build Your Own Resume.'],
+      typeSpeed: 50,
+    });
+  </script>
+<script src="script.js" type="module"></script>
+</body>
+
+</html>

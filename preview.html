@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview CV</title>
+    <link rel="stylesheet" href="mainstyle.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Resume Builder</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="personalinfo.html">Personal Information</li></a>
+                   <li><a href="education.html">Education</li></a>
+                    <li><a href="skills.html">Skills</li></a>
+                    <li><a href="experiance.html">Working Experiance</li></a>
+                    <li><a href="preview.html">Preview CV</li></a>
+                </ul>
+    
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+   <form id="cvdisplayform">
+ <div class="leftside">
+    <h2 class="headers">Personal Information</h2>
+    <h3 class="pinfo" id="outputname">Username</h3>
+    <p class="ename" id="outputemail">Email</p>
+    <p class="outputPhone" id="outputphone">Phone</p>
+    <p class="outputAddress" id="outputaddress">Address</p>
+ </div>
+ <hr>
+ <div class="rightside">
+    <h2 class="headers" >Education</h2>
+    <p class="scname" id="School">School Name</p>
+    <p class="dename" id="degree">Degree</p>
+    <p class="Yearcom" id="Yearcom">Year of Completion</p>
+    <hr>
+    <h2 class="headers">Skills</h2>
+    <p class="skill" id="skill">Skills</p>
+    <hr>
+    <h2 class="headers" >Working Experiance</h2>
+    <p class="jobtitle" id="jobtitle">Jop title</p>
+    <p class="comp" id="company">Company</p>
+    <p class="workyear" id="workyear">Working Experiance</p>
+ </div>
+<button class="btnclear" id="click">Save</button>
+</form>
+<div class="popup" id="statusmessage" >
+    <img src="img1.png" id="img">
+    <h2>Thank You!</h2>
+    <p>Your details has been successfully submitted. </p>
+    <button type="button" id="submit">Ok</button>
+</div>
+</div>
+<script >
+ //getting personal information values from localstorage
+ const outname=localStorage.getItem("first-name");
+ const outemail=localStorage.getItem("Email");
+ const outphone=localStorage.getItem("Phone");
+ const outadress=localStorage.getItem("Address");
+ 
+ //getting personal information html ids and set values on that ids
+ document.getElementById("outputname").textContent=outname;
+ document.getElementById("outputemail").textContent=outemail;
+ document.getElementById("outputphone").textContent=outphone;
+ document.getElementById("outputaddress").textContent=outadress;
+
+ //getting Education Values from local storage
+ const schoolname = localStorage.getItem("School-Name");
+const degreename = localStorage.getItem("Degree"); 
+const yearCompletion = localStorage.getItem("Year Of Completion"); 
+
+  //getting education html ids and set values on that ids
+  document.getElementById("School").textContent = schoolname || "School Name";
+document.getElementById("degree").textContent = degreename || "Degree";
+document.getElementById("Yearcom").textContent = yearCompletion || "Year of Completion";
+
+//getting skills values from local storage
+const outskill= localStorage.getItem("Skills");
+
+
+
+//getting skills html IDS and Set values in it
+document.getElementById("skill").textContent=outskill || "Your Skills";
+
+//getting experiance values from local storage
+const outjob=localStorage.getItem("Job");
+const outcompany=localStorage.getItem("Company");
+const outworkexp=localStorage.getItem("workingexp");
+
+//getting experiance html IDS  and set values in it
+
+document.getElementById("jobtitle").textContent=outjob;
+document.getElementById("company").textContent=outcompany;
+document.getElementById("workyear").textContent=outworkexp;
+
+//to clear form data 
+const clearbutton=document.getElementById("click");
+clearbutton.addEventListener("click",function(){
+
+    event.preventDefault(); // Prevent form submission if it's inside a form element
+
+// Clear local storage
+localStorage.clear();
+
+// Reset the displayed values
+document.getElementById("outputname").textContent = "Username";
+document.getElementById("outputemail").textContent = "Email";
+document.getElementById("outputphone").textContent = "Phone";
+document.getElementById("outputaddress").textContent = "Address";
+
+document.getElementById("School").textContent = "School Name";
+document.getElementById("degree").textContent = "Degree";
+document.getElementById("Yearcom").textContent = "Year of Completion";
+
+document.getElementById("skill").textContent = "Your Skills";
+
+document.getElementById("jobtitle").textContent = "Job Title";
+document.getElementById("company").textContent = "Company";
+document.getElementById("workyear").textContent = "Working Experience";
+
+// Show a success message to the user
+//to show popup message on button click
+const popup=document.getElementById("statusmessage");
+
+
+//to open status message
+
+   popup.classList.add("open-popup");    
+
+});
+//to open message on button click
+//to show popup message on button click
+document.addEventListener("DOMContentLoaded", function() {
+    const popup = document.getElementById("statusmessage");
+    const btnClosePopup = document.getElementById("submit");
+      
+        btnClosePopup.addEventListener("click", function() {
+            
+            popup.classList.remove("open-popup");
+        });
+    
+});
+
+
+
+
+
+
+</script>
+</body>
+</html>

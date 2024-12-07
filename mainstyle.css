@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(100, 4, 49);
+    color: white;
+    font-family: 'poppins',sans-serif;
+}
+nav{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    height: 80px;
+    background-color: rgb(192, 53, 118);
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+.left{
+    font-size: 2rem;
+}
+nav ul li{
+    list-style: none;
+    margin: 0 23px;
+}
+nav ul li a{
+   text-decoration: none;
+   color: white;
+}
+nav ul li a:hover{
+   color: rgb(224, 167, 196);
+   font-size: 1.1rem;
+}
+.first-section{
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0;
+}
+.first-section > div{
+width: 30%;
+}
+.left-section{
+   
+    font-size: 2.5rem;
+   
+}
+.leftinner{
+    font-size: 1.8rem;
+}
+right-section img{
+width: 100%;
+margin: 50px 0;
+}
+.colors{
+color: rgba(238, 11, 136, 0.911);
+font-size: 3rem;
+font-weight: 600;
+}
+#element{
+color: rgba(250, 68, 168, 0.911); 
+}
+/*Styling of Form*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  #submit {
+    background-color: #aa0436;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  #submit:hover {
+    background-color: #ac4e90;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    width: 90%;
+    max-width: 50vw;
+    background-color: #c798ac;
+    padding: 20px;
+    margin: 40px 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  }
+  #cv-preview {
+    margin-top: 40px;
+  }
+  
+  #cv-output {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #c798ac;
+  }  
+  .btnclear{
+    background-color: #aa0436;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .headers{
+    color: #ac4e90;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+ .popup{
+  width: 400px;
+  background: #fff;
+  border-radius: 6px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0.1);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s,top 0.4s;
+ }
+ .open-popup{
+  top: 50%;
+  transform: translate(-50%,-50%) scale(1);
+  visibility: visible;
+
+ }
+ .popup.open-popup {
+  display: block;
+}
+  #img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+ }
+ .popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+ }
+ .popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #aa0436;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+
+ }
